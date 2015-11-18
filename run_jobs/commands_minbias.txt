@@ -1,0 +1,126 @@
+cd /afs/cern.ch/work/r/rkopecna/minbias/
+
+mkdir 0_5
+mkdir 5_30
+mkdir 30_60
+mkdir 60_100
+
+cd 0_5/
+mkdir histograms0
+mkdir histograms1
+mkdir histograms2
+mkdir histograms3
+
+cd ../5_30/
+mkdir histograms0
+mkdir histograms1
+mkdir histograms2
+mkdir histograms3
+
+cd ../30_60/
+mkdir histograms0
+mkdir histograms1
+mkdir histograms2
+mkdir histograms3
+
+cd ../60_100/
+mkdir histograms0
+mkdir histograms1
+mkdir histograms2
+mkdir histograms3
+
+cd /afs/cern.ch/user/r/rkopecna/run_jobs/log/minbias/
+
+>pt0_m0_back_log.txt
+>pt0_m1_back_log.txt
+>pt0_m2_back_log.txt
+>pt0_m3_back_log.txt
+
+>pt1_m0_back_log.txt
+>pt1_m1_back_log.txt
+>pt1_m2_back_log.txt
+>pt1_m3_back_log.txt
+
+>pt2_m0_back_log.txt
+>pt2_m1_back_log.txt
+>pt2_m2_back_log.txt
+>pt2_m3_back_log.txt
+
+>pt3_m0_back_log.txt
+>pt3_m1_back_log.txt
+>pt3_m2_back_log.txt
+>pt3_m3_back_log.txt
+
+>pt0_m0_sig_log.txt
+>pt0_m1_sig_log.txt
+>pt0_m2_sig_log.txt
+>pt0_m3_sig_log.txt
+
+>pt1_m0_sig_log.txt
+>pt1_m1_sig_log.txt
+>pt1_m2_sig_log.txt
+>pt1_m3_sig_log.txt
+
+>pt2_m0_sig_log.txt
+>pt2_m1_sig_log.txt
+>pt2_m2_sig_log.txt
+>pt2_m3_sig_log.txt
+
+>pt3_m0_sig_log.txt
+>pt3_m1_sig_log.txt
+>pt3_m2_sig_log.txt
+>pt3_m3_sig_log.txt
+
+cd /afs/cern.ch/user/r/rkopecna/run_jobs/minbias/
+
+cd sig
+cd pt0
+
+bsub -J moreLLToys[1-418] < createToys_pt0_m0_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt0_m1_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt0_m2_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt0_m3_sig.sh 
+
+cd ../pt1
+bsub -J moreLLToys[1-418] < createToys_pt1_m0_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt1_m1_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt1_m2_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt1_m3_sig.sh 
+
+cd ../pt2
+bsub -J moreLLToys[1-418] < createToys_pt2_m0_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt2_m1_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt2_m2_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt2_m3_sig.sh 
+
+cd ../pt3
+bsub -J moreLLToys[1-418] < createToys_pt3_m0_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt3_m1_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt3_m2_sig.sh 
+bsub -J moreLLToys[1-418] < createToys_pt3_m3_sig.sh 
+
+
+cd ../../
+cd back/pt0
+bsub -J moreLLToys[1-418] < createToys_pt0_m0_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt0_m1_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt0_m2_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt0_m3_back.sh 
+
+cd ../pt1
+bsub -J moreLLToys[1-418] < createToys_pt1_m0_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt1_m1_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt1_m2_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt1_m3_back.sh 
+
+cd ../pt2
+bsub -J moreLLToys[1-418] < createToys_pt2_m0_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt2_m1_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt2_m2_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt2_m3_back.sh 
+
+cd ../pt3
+bsub -J moreLLToys[1-418] < createToys_pt3_m0_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt3_m1_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt3_m2_back.sh 
+bsub -J moreLLToys[1-418] < createToys_pt3_m3_back.sh 

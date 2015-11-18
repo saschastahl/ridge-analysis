@@ -1,0 +1,14 @@
+cd /afs/cern.ch/user/r/rkopecna/run_jobs/plotting/
+
+mkdir high
+mkdir minbias
+mkdir mc
+
+g++ ridge.cpp  ../codes/source/general.cpp  ./general_plot.cpp `root-config --libs --cflags` -o ridge
+
+g++ plot_one.cpp  ../codes/source/general.cpp  ./general_plot.cpp `root-config --libs --cflags` -o plot
+
+./plot
+./ridge
+
+
